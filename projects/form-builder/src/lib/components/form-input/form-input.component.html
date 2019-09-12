@@ -1,0 +1,8 @@
+<div class="ngx-form" [formGroup]="group">
+    <div class="ngx-form__group">
+        <input class="ngx-form__input" type="text" [formControlName]="config.name" required>
+        <label class="ngx-form__label">{{ config.label }}</label>
+        <div class="ngx-form__error" *ngIf="!group.controls.valid && group.controls[config.name].errors && submitted">
+            Required</div>
+    </div>
+</div>

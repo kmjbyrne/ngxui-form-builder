@@ -1,0 +1,111 @@
+::ng-deep {
+    .ngx-form {
+        margin-bottom: 15px;
+
+        &__label,
+        &__error {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            color: #212121;
+            font-weight: 300;
+            margin: 0 1rem;
+            -webkit-transition: 0.2s ease;
+            transition: 0.2s ease;
+            background-color: transparent;
+            z-index: 20;
+            padding: 0px 5px;
+
+            &:after {
+                content: '\A';
+            }
+        }
+
+        &__error {
+            color: orange;
+            -webkit-transform: translate(0, -140%) scale(0.75);
+            transform: translate(0, -140%) scale(0.75);
+            height: 30px;
+            font-weight: 500;
+            left: auto;
+            right: 0;
+        }
+
+        &__group {
+            display: flex;
+            position: relative;
+            margin: 0 50px 3rem;
+            flex: 1;
+            justify-content: space-between;
+        }
+
+        &__select,
+        &__input {
+            outline: none;
+            z-index: 1;
+            position: relative;
+            background: none;
+            width: 100%;
+            height: 60px;
+            border: 0;
+            // letter-spacing: 2px;
+            font-size: 1rem;
+            color: #212121;
+            font-weight: 400;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.2rem;
+            padding: 0 1rem;
+        }
+
+        &__select {
+            text-indent: 0.6rem;
+        }
+
+        &__label,
+        &__error {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            color: #212121;
+            font-weight: 300;
+            margin: 0 1rem;
+            -webkit-transition: 0.2s ease;
+            transition: 0.2s ease;
+            background-color: transparent;
+            z-index: 20;
+            padding: 0px 5px;
+
+            &:after {
+                content: '\A';
+            }
+        }
+
+        &__error {
+            color: orange;
+            -webkit-transform: translate(0, -140%) scale(0.75);
+            transform: translate(0, -140%) scale(0.75);
+            height: 30px;
+            font-weight: 500;
+            left: auto;
+            right: 0;
+        }
+
+        &__input:focus {
+            border-color: black;
+        }
+
+        &__select:focus+&__label,
+        &__select:valid+&__label,
+        &__input:focus+&__label,
+        &__input:valid+&__label {
+            color: orange;
+            -webkit-transform: translate(-12%, -50%) scale(0.75);
+            transform: translate(-12%, -140%) scale(0.75);
+            height: 30px;
+            font-weight: 500;
+            border-color: green;
+        }
+    }
+}

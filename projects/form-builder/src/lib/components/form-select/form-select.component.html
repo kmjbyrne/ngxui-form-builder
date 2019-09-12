@@ -1,0 +1,13 @@
+<div class="ngx-form" [formGroup]="group">
+    <div class="ngx-form__group">
+        <select class="ngx-form__select" [formControlName]="config.name" required>
+            <!-- <option value="" disabled>{{ config.placeholder }}</option> -->
+            <option [value]="option" *ngFor="let option of config.options">
+                {{ option }}
+            </option>
+        </select>
+        <div class="ngx-form__label">{{ config.label }}</div>
+        <div class="ngx-form__error" *ngIf="!group.controls.valid && group.controls[config.name].errors && submitted">
+            Required</div>
+    </div>
+</div>
