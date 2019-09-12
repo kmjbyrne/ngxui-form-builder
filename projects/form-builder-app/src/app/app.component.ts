@@ -10,40 +10,8 @@ import { Validators } from '@angular/forms';
 })
 export class AppComponent implements OnInit, AfterViewInit {
     title = 'Ngx Form Builder Demo';
-    @ViewChild(NgxFormBuilderComponent, { static: false }) form: NgxFormBuilderComponent;
+    // @ViewChild(NgxFormBuilderComponent, { static: false }) form: NgxFormBuilderComponent;
     submitted = false;
-    code = `
-    config: FieldConfig[] = [
-        {
-            type: 'input',
-            label: 'Name',
-            name: 'name',
-            placeholder: 'Enter your name',
-            validation: [Validators.required, Validators.minLength(4)]
-        },
-        {
-            type: 'select',
-            label: 'Colours',
-            name: 'colours',
-            placeholder: 'Select an option',
-            options: ['Blue', 'Green', 'Yellow', 'Black'],
-            validation: [Validators.required]
-        },
-        {
-            type: 'input',
-            label: 'Mood',
-            name: 'mood',
-            placeholder: 'Enter your mood',
-            validation: [Validators.required]
-        },
-        {
-            type: 'button',
-            label: 'Enter Details',
-            name: 'submit',
-            // placeholder: 'Enter your mood',
-            //validation: [Validators.required]
-        }
-    ];`;
 
     config: FieldConfig[] = [
         {
@@ -84,13 +52,13 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     ngAfterViewInit() {
         setTimeout(() => {
-            let previousValid = this.form.valid;
-            this.form.changes.subscribe(() => {
-                if (this.form.valid !== previousValid) {
-                    previousValid = this.form.valid;
-                    // this.form.setDisabled('submit', !previousValid);
-                }
-            });
+            // let previousValid = this.form.valid;
+            // this.form.changes.subscribe(() => {
+            //     if (this.form.valid !== previousValid) {
+            //         previousValid = this.form.valid;
+            //         // this.form.setDisabled('submit', !previousValid);
+            //     }
+            // });
 
             // this.form.setDisabled('submit', false);
             // this.form.setValue('testA', 'Testtesttest');

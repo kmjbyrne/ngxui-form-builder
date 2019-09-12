@@ -15,6 +15,8 @@ export class FormInputComponent implements OnInit, Field {
     group: FormGroup;
     submitted: boolean;
 
+    get g() { return this.group; }
+
     ngOnInit() {
         console.log(this.config);
         console.log(this.group);
@@ -24,5 +26,9 @@ export class FormInputComponent implements OnInit, Field {
     valid(formGroup) {
         // this.group.updateValueAndValidity();
         // this.group.markAsTouched();
+    }
+
+    control(name: string): object {
+        return this.g.controls[name];
     }
 }
